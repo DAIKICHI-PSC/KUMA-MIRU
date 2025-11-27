@@ -741,7 +741,7 @@ lang=EN-US>sample_kuma_miru_sound</span>の設定ファイル</p>
 
 <p class=MsoNormal><span lang=EN-US>yolov4.cfg</span>　<span lang=EN-US>AI</span>の学習モデル</p>
 
-<p class=MsoNormal><span lang=EN-US>[yolov4.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights)</span>　<span lang=EN-US>AI</span>の学習済モデル（ダウンロードして、同じフォルダに入れて下さい）</p>
+<p class=MsoNormal><span lang=EN-US>yolov4.weights(https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights)</span>　<span lang=EN-US>AI</span>の学習済モデル（ダウンロードして、同じフォルダに入れて下さい）</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
