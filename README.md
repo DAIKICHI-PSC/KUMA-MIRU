@@ -861,4 +861,3 @@ programs to executable file</span></p>
 </body>
 
 </html>
-https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection0.jpg
