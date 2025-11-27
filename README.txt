@@ -33,6 +33,7 @@ kuma_miru.py               熊を検出するプログラム（検出後の処�
 README.txt                 説明書
 sample_kuma_miru_mail.py   熊を検出したらメールを送信するプログラム
 sample_kuma_miru_sound.py  熊を検出したら犬の鳴き声を再生するプログラム
+sample_send_mail.py        メールを送信するモジュール
 sample_settings_mail.txt   sample_kuma_miru_mailの設定ファイル
 sample_settings_sound.txt  sample_kuma_miru_soundの設定ファイル
 settings.txt               共通の設定ファイル
