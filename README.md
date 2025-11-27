@@ -855,7 +855,9 @@ programs to executable file</span></p>
 <p class=MsoNormal><span lang=EN-US>pixabay</span></p>
 
 <p class=MsoNormal><span lang=EN-US>https://pixabay.com/</span></p>
-
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection0.jpg" alt="bear" class="left" />
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection1.jpg" alt="bear" class="left" />
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection2.jpg" alt="bear" class="left" />
 </div>
 
 </body>
