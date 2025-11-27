@@ -31,7 +31,7 @@ excutable_files.zip        圧縮された三つの実行ファイル（ダウ�
 https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable_files.zip
 kuma_miru.py               熊を検出するプログラム（検出後の処理は未実装）
 README.txt                 説明書
-sample_kuma_miru_mail.py   熊を検出したらメールを送信するプログラム
+sample_kuma_miru_mail.py   熊を検出したらメールを送信するプログラム（熊を検出した各カメラの画像を添付しますので、誤検出か確認出来ます）
 sample_kuma_miru_sound.py  熊を検出したら犬の鳴き声を再生するプログラム
 sample_send_mail.py        メールを送信するモジュール
 sample_settings_mail.txt   sample_kuma_miru_mailの設定ファイル
