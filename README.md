@@ -817,7 +817,7 @@ community</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US>Inventor of yolo4(darknet)</span></p>
+<p class=MsoNormal><span lang=EN-US>Inventor of yolov4(darknet)</span></p>
 
 <p class=MsoNormal><span lang=EN-US>Aleksei Bochkovskii and the community</span></p>
 
