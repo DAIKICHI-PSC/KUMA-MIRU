@@ -677,7 +677,7 @@ lang=EN-US>WEB</span>カメラを接続」して運用出来る様にしまし�
 
 <p class=MsoNormal>十分な処理速度を保てる範囲で、複数台のカメラを接続して下さい（実際の運用ではリアルタイムで検出する必要はないので、６台程度までカメラを接続しても問題ないかと思います）。</p>
 
-<p class=MsoNormal><span lang=EN-US>WINDOWS11PRO</span>がインストールされた<span
+<p class=MsoNormal><span lang=EN-US>Windows11 Pro</span>がインストールされた<span
 lang=EN-US>PC</span>を採用する事で、初期設定後はリモートで運用出来ます。</p>
 
 <p class=MsoNormal>オープンソースのネットワークソフトウェア、<span lang=EN-US>SoftEther VPN</span>を使用する事で、柔軟なネットワークを使用した運用管理が可能になるのではないでしょうか。</p>
