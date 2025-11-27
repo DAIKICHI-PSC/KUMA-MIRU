@@ -852,7 +852,7 @@ programs to executable file</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal>ロイヤリティフリーの画像の提供</p>
+<p class=MsoNormal>ロイヤリティフリー画像の提供</p>
 
 <p class=MsoNormal><span lang=EN-US>pixabay</span></p>
 
