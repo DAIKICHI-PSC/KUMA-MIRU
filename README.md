@@ -727,7 +727,7 @@ lang=EN-US>21</span>から<span lang=EN-US>0</span>にして人を検出して�
 
 <p class=MsoNormal><span lang=EN-US>README.txt</span>　説明書</p>
 
-<p class=MsoNormal><span lang=EN-US>sample_kuma_miru_mail.py</span>　熊を検出したらメールを送信するプログラム</p>
+<p class=MsoNormal><span lang=EN-US>sample_kuma_miru_mail.py</span>　熊を検出したらメールを送信するプログラム（熊を検出した各カメラの画像を添付しますので、誤検出か確認出来ます）</p>
 
 <p class=MsoNormal><span lang=EN-US>sample_kuma_miru_sound.py</span>　熊を検出したら犬の鳴き声を再生するプログラム</p>
 
