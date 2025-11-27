@@ -731,6 +731,8 @@ lang=EN-US>21</span>から<span lang=EN-US>0</span>にして人を検出して�
 
 <p class=MsoNormal><span lang=EN-US>sample_kuma_miru_sound.py</span>　熊を検出したら犬の鳴き声を再生するプログラム</p>
 
+<p class=MsoNormal><span lang=EN-US>sample_send_mail.py</span>　メールを送信するモジュール</p>
+
 <p class=MsoNormal><span lang=EN-US>sample_settings_mail.txt</span>　<span
 lang=EN-US> sample_kuma_miru_mail</span>の設定ファイル</p>
 
