@@ -1,105 +1,262 @@
-「ＫＵＭＡ　ＭＩＲＵ」
+<html>
 
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:游明朝;
+	panose-1:2 2 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@游明朝";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"游明朝",serif;}
+.MsoChpDefault
+	{font-family:"游明朝",serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 30.0mm 30.0mm 30.0mm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
 
+</head>
 
-［概要］
-本プログラムは、AIで「熊」を検出するプログラムです（設定ファイルで、cocoデータセットの他の番号に変えれば、他の物体も高精度に検出可能です）。
- 
-最近の熊による被害に対して、何か貢献出来ないかと思い、作成しました。
- 
-物体検出結果を保持する変数external_outputを使用し、値によって外部出力して下さい（各種通知、パトライト等の熊への威嚇装置）。
+<body lang=JA style='word-wrap:break-word;text-justify-trim:punctuation'>
 
+<div class=WordSection1 style='layout-grid:18.0pt'>
 
+<p class=MsoNormal>「ＫＵＭＡ　ＭＩＲＵ」</p>
 
-多方向の物体検出を安価に行う為、一台のPCに「複数のWEBカメラを接続」して運用出来る様にしました。
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-十分な処理速度を保てる範囲で、複数台のカメラを接続して下さい（実際の運用ではリアルタイムで検出する必要はないので、６台程度までカメラを接続しても問題ないかと思います）。
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-WINDOWS11PROがインストールされたPCを採用する事で、初期設定後はリモートで運用出来ます。
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-オープンソースのネットワークソフトウェア、SoftEther VPNを使用する事で、柔軟なネットワークを使用した運用管理が可能になるのではないでしょうか。
+<p class=MsoNormal>［概要］</p>
 
+<p class=MsoNormal>本プログラムは、<span lang=EN-US>AI</span>で「熊」を検出するプログラムです（設定ファイルで、<span
+lang=EN-US>coco</span>データセットの他の番号に変えれば、他の物体も高精度に検出可能です）。</p>
 
+<p class=MsoNormal>最近の熊による被害に対して、何か貢献出来ないかと思い、作成しました。</p>
 
-用途に応じて、PCを選択して下さい（後付けGPUは高価かなので、今回は非対応にしました）。
-rapberryPI5等のエッジコンピューターも検討しましたが、価格と設定の手間を考えて、保留としました。
-アマゾン社で購入出来る安価なPC等で運用可能です（INTEL社のN97やN95で処理時間は約900ミリ秒×カメラの台数となり、PC本体とカメラ１台の費用は3万円前後となります）（AMD社のRyzen7PRO6850Hの処理時間は約250ミリ秒×カメラの台数となり、PC本体とカメラ1台の費用は6万円前後となります）。
+<p class=MsoNormal>物体検出結果を保持する変数<span lang=EN-US>external_output</span>を使用し、値によって外部出力して下さい（各種通知、パトライト等の熊への威嚇装置）。</p>
 
-本プログラムのテストは、カメラを熊の画像に向けるか（精度は落ちます）、「settings.txt」内にある、検出する物体の番号を、熊の21から0にして人を検出してください。
-パソコンの起動と同時にプログラムも自動で起動出来る様、「タスクマネージャー」の「スタートアップ アプリ」にある、「新しいタスクを実行する」でプログラムを指定して下さい。
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
+<p class=MsoNormal>多方向の物体検出を安価に行う為、一台の<span lang=EN-US>PC</span>に「複数の<span
+lang=EN-US>WEB</span>カメラを接続」して運用出来る様にしました。</p>
 
+<p class=MsoNormal>十分な処理速度を保てる範囲で、複数台のカメラを接続して下さい（実際の運用ではリアルタイムで検出する必要はないので、６台程度までカメラを接続しても問題ないかと思います）。</p>
 
-［各ファイルの説明］
-materialsフォルダ          資料が入っています
-0.mp3                      犬の効果音データ
-1.mp3                      犬の効果音データ
-2.mp3                      犬の効果音データ
-coco.names                 物体検出名のリスト
-excutable_files.zip        圧縮された三つの実行ファイル（本フォルダに解凍すれば即時に運用可能）
-kuma_miru.py               熊を検出するプログラム（検出後の処理は未実装）
-README.txt                 説明書
-sample_kuma_miru_mail.py   熊を検出したらメールを送信するプログラム
-sample_kuma_miru_sound.py  熊を検出したら犬の鳴き声を再生するプログラム
-sample_settings_mail.txt   sample_kuma_miru_mailの設定ファイル
-sample_settings_sound.txt  sample_kuma_miru_soundの設定ファイル
-settings.txt               共通の設定ファイル
-yolov4.cfg                 AIの学習モデル
-yolov4.weights             AIの学習済モデル
+<p class=MsoNormal><span lang=EN-US>WINDOWS11PRO</span>がインストールされた<span
+lang=EN-US>PC</span>を採用する事で、初期設定後はリモートで運用出来ます。</p>
 
+<p class=MsoNormal>オープンソースのネットワークソフトウェア、<span lang=EN-US>SoftEther VPN</span>を使用する事で、柔軟なネットワークを使用した運用管理が可能になるのではないでしょうか。</p>
 
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-［ライセンス］
-本プログラム
-MIT LISENCE
-配布、改変、商用利用等、全て自由です。
-Apache License 2.0のコードを使用しております（OpenCV）。
+<p class=MsoNormal>用途に応じて、<span lang=EN-US>PC</span>を選択して下さい（後付け<span
+lang=EN-US>GPU</span>は高価かなので、今回は非対応にしました）。</p>
 
-Python
-Python Software Foundation License
-成果物の配布、改変、商用利用等、全て自由です。
+<p class=MsoNormal><span lang=EN-US>rapberryPI5</span>等のエッジコンピューターも検討しましたが、価格と設定の手間を考えて、保留としました。</p>
 
-Yolov4
-MIT LISENCE
-配布、改変、商用利用等、全て自由です。
+<p class=MsoNormal>アマゾン社で購入出来る安価な<span lang=EN-US>PC</span>等で運用可能です（<span
+lang=EN-US>INTEL</span>社の<span lang=EN-US>N97</span>や<span lang=EN-US>N95</span>で処理時間は約<span
+lang=EN-US>900</span>ミリ秒<span lang=EN-US>×</span>カメラの台数となり、<span lang=EN-US>PC</span>本体とカメラ１台の費用は<span
+lang=EN-US>3</span>万円前後となります）（<span lang=EN-US>AMD</span>社の<span lang=EN-US>Ryzen7PRO6850H</span>の処理時間は約<span
+lang=EN-US>250</span>ミリ秒<span lang=EN-US>×</span>カメラの台数となり、<span lang=EN-US>PC</span>本体とカメラ<span
+lang=EN-US>1</span>台の費用は<span lang=EN-US>6</span>万円前後となります）。</p>
 
-OpenCV
-Apache License 2.0
-配布、改変、商用利用等、全て自由です。
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-pyinstaller
-https://github.com/pyinstaller/pyinstaller/wiki/FAQ
-成果物の配布、改変、商用利用等、全て自由です。
+<p class=MsoNormal>本プログラムのテストは、カメラを熊の画像に向けるか（精度は落ちます）、「<span lang=EN-US>settings.txt</span>」内にある、検出する物体の番号を、熊の<span
+lang=EN-US>21</span>から<span lang=EN-US>0</span>にして人を検出してください。</p>
 
+<p class=MsoNormal>パソコンの起動と同時にプログラムも自動で起動出来る様、「タスクマネージャー」の「スタートアップ アプリ」にある、「新しいタスクを実行する」でプログラムを指定して下さい。</p>
 
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-［感謝］
-Developer of Python(programming language)
-Python Software Foundation and the community
-https://www.python.org/
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-Inventor of yolov1 to yolov3(darknet)
-Joseph Redmon and the community
-https://github.com/pjreddie
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-Inventor of yolo4(darknet)
-Aleksei Bochkovskii and the community
-https://github.com/AlexeyAB
+<p class=MsoNormal>［各ファイルの説明］</p>
 
-Developer of image processing module
-OpenCV and the community
-https://github.com/opencv
+<p class=MsoNormal><span lang=EN-US>materials</span>フォルダ<span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>資料が入っています</p>
 
-Developer of software that converts Python programs to executable file
-pyinstaller and the community
-https://github.com/pyinstaller
+<p class=MsoNormal><span lang=EN-US>0.mp3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>犬の効果音データ</p>
 
-フリー効果音素材の提供
-効果音ラボ
-https://soundeffect-lab.info/
+<p class=MsoNormal><span lang=EN-US>1.mp3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>犬の効果音データ</p>
 
-ロイヤリティフリーの画像の提供
-pixabay
-https://pixabay.com/
+<p class=MsoNormal><span lang=EN-US>2.mp3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>犬の効果音データ</p>
+
+<p class=MsoNormal><span lang=EN-US>coco.names&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>物体検出名のリスト</p>
+
+<p class=MsoNormal><span lang=EN-US>excutable_files.zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>圧縮された三つの実行ファイル（本フォルダに解凍すれば即時に運用可能）</p>
+
+<p class=MsoNormal><span lang=EN-US>kuma_miru.py&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>熊を検出するプログラム（検出後の処理は未実装）</p>
+
+<p class=MsoNormal><span lang=EN-US>README.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>説明書</p>
+
+<p class=MsoNormal><span lang=EN-US>sample_kuma_miru_mail.py&nbsp;&nbsp; </span>熊を検出したらメールを送信するプログラム</p>
+
+<p class=MsoNormal><span lang=EN-US>sample_kuma_miru_sound.py&nbsp; </span>熊を検出したら犬の鳴き声を再生するプログラム</p>
+
+<p class=MsoNormal><span lang=EN-US>sample_settings_mail.txt&nbsp;&nbsp;
+sample_kuma_miru_mail</span>の設定ファイル</p>
+
+<p class=MsoNormal><span lang=EN-US>sample_settings_sound.txt&nbsp;
+sample_kuma_miru_sound</span>の設定ファイル</p>
+
+<p class=MsoNormal><span lang=EN-US>settings.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>共通の設定ファイル</p>
+
+<p class=MsoNormal><span lang=EN-US>yolov4.cfg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+AI</span>の学習モデル</p>
+
+<p class=MsoNormal><span lang=EN-US>yolov4.weights&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+AI</span>の学習済モデル</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>［ライセンス］</p>
+
+<p class=MsoNormal>本プログラム</p>
+
+<p class=MsoNormal><span lang=EN-US>MIT LISENCE</span></p>
+
+<p class=MsoNormal>配布、改変、商用利用等、全て自由です。</p>
+
+<p class=MsoNormal><span lang=EN-US>Apache License 2.0</span>のコードを使用しております（<span
+lang=EN-US>OpenCV</span>）。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Python</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Python Software Foundation License</span></p>
+
+<p class=MsoNormal>成果物の配布、改変、商用利用等、全て自由です。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Yolov4</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MIT LISENCE</span></p>
+
+<p class=MsoNormal>配布、改変、商用利用等、全て自由です。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>OpenCV</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Apache License 2.0</span></p>
+
+<p class=MsoNormal>配布、改変、商用利用等、全て自由です。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>pyinstaller</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://github.com/pyinstaller/pyinstaller/wiki/FAQ</span></p>
+
+<p class=MsoNormal>成果物の配布、改変、商用利用等、全て自由です。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>［感謝］</p>
+
+<p class=MsoNormal><span lang=EN-US>Developer of Python(programming language)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Python Software Foundation and the
+community</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://www.python.org/</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Inventor of yolov1 to yolov3(darknet)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Joseph Redmon and the community</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://github.com/pjreddie</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Inventor of yolo4(darknet)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Aleksei Bochkovskii and the community</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://github.com/AlexeyAB</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Developer of image processing module</span></p>
+
+<p class=MsoNormal><span lang=EN-US>OpenCV and the community</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://github.com/opencv</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Developer of software that converts Python
+programs to executable file</span></p>
+
+<p class=MsoNormal><span lang=EN-US>pyinstaller and the community</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://github.com/pyinstaller</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>フリー効果音素材の提供</p>
+
+<p class=MsoNormal>効果音ラボ</p>
+
+<p class=MsoNormal><span lang=EN-US>https://soundeffect-lab.info/</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>ロイヤリティフリーの画像の提供</p>
+
+<p class=MsoNormal><span lang=EN-US>pixabay</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://pixabay.com/</span></p>
+
+</div>
+
+</body>
+
+</html>
 
 
