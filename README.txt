@@ -28,7 +28,7 @@ materialsフォルダ          資料が入っています
 2.mp3                      犬の効果音データ
 coco.names                 物体検出名のリスト
 excutable_files.zip        圧縮された三つの実行ファイル（本フォルダに解凍すれば即時に運用可能）
-(https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable_files.zip)
+https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable_files.zip
 kuma_miru.py               熊を検出するプログラム（検出後の処理は未実装）
 README.txt                 説明書
 sample_kuma_miru_mail.py   熊を検出したらメールを送信するプログラム
@@ -38,7 +38,7 @@ sample_settings_sound.txt  sample_kuma_miru_soundの設定ファイル
 settings.txt               共通の設定ファイル
 yolov4.cfg                 AIの学習モデル
 yolov4.weights             AIの学習済モデル（ダウンロードして、同じフォルダに入れて下さい）
-(https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights)　
+https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights
 
 
 
