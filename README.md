@@ -661,6 +661,16 @@ punctuation'>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection0.jpg" alt="bear" class="left" />
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection1.jpg" alt="bear" class="left" />
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection2.jpg" alt="bear" class="left" />
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
 <p class=MsoNormal>［概要］</p>
 
 <p class=MsoNormal>本プログラムは、<span lang=EN-US>AI</span>で「熊」を検出するプログラムです（設定ファイルで、<span
@@ -857,9 +867,7 @@ programs to executable file</span></p>
 <p class=MsoNormal><span lang=EN-US>pixabay</span></p>
 
 <p class=MsoNormal><span lang=EN-US>https://pixabay.com/</span></p>
-<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection0.jpg" alt="bear" class="left" />
-<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection1.jpg" alt="bear" class="left" />
-<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection2.jpg" alt="bear" class="left" />
+
 </div>
 
 </body>
