@@ -725,8 +725,7 @@ lang=EN-US>21</span>から<span lang=EN-US>0</span>にして人を検出して�
 
 <p class=MsoNormal><span lang=EN-US>coco.names</span>　物体検出名のリスト</p>
 
-<p class=MsoNormal><span lang=EN-US>excutable_files.zip</span>　圧縮された三つの実行ファイル（ダウンロードして、本フォルダに解凍すれば即時に運用可能）</p>
-https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable_files.zip
+<p class=MsoNormal><span lang=EN-US>excutable_files.ziphttps://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable_files.zip()</span>　圧縮された三つの実行ファイル（ダウンロードして、本フォルダに解凍すれば即時に運用可能）</p>
 
 <p class=MsoNormal><span lang=EN-US>kuma_miru.py</span>　熊を検出するプログラム（検出後の処理は未実装）</p>
 
@@ -748,8 +747,7 @@ lang=EN-US>sample_kuma_miru_sound</span>の設定ファイル</p>
 
 <p class=MsoNormal><span lang=EN-US>yolov4.cfg</span>　<span lang=EN-US>AI</span>の学習モデル</p>
 
-<p class=MsoNormal><span lang=EN-US>yolov4.weights</span>　<span lang=EN-US>AI</span>の学習済モデル（ダウンロードして、同じフォルダに入れて下さい）</p>
-https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights
+<p class=MsoNormal><span lang=EN-US>yolov4.weightshttps://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights()</span>　<span lang=EN-US>AI</span>の学習済モデル（ダウンロードして、同じフォルダに入れて下さい）</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
