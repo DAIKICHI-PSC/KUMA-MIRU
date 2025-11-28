@@ -804,7 +804,7 @@ lang=EN-US>OpenCV</span>）。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal>［感謝］</p>
+<p class=MsoNormal>［感謝 appreciation］</p>
 
 <p class=MsoNormal><span lang=EN-US>Developer of Python(programming language)</span></p>
 
