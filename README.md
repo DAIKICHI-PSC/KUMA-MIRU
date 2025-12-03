@@ -802,7 +802,7 @@ lang=EN-US>OpenCV</span>）。</p>
 
 <p class=MsoNormal><span lang=EN-US>pygame</span></p>
 
-<p class=MsoNormal><span lang=EN-US>GNU Lesser General Public License</span></p>
+<p class=MsoNormal><span lang=EN-US>LGPL</span></p>
 
 <p class=MsoNormal>配布、商用利用が可能です。</p>
 
