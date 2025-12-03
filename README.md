@@ -800,6 +800,14 @@ lang=EN-US>OpenCV</span>）。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
+<p class=MsoNormal><span lang=EN-US>pygame</span></p>
+
+<p class=MsoNormal><span lang=EN-US>GNU Lesser General Public License</span></p>
+
+<p class=MsoNormal>配布、商用利用が可能です。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -845,6 +853,14 @@ programs to executable file</span></p>
 <p class=MsoNormal><span lang=EN-US>pyinstaller and the community</span></p>
 
 <p class=MsoNormal><span lang=EN-US>https://github.com/pyinstaller</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Developer of game creating module</span></p>
+
+<p class=MsoNormal><span lang=EN-US>pygame and the community</span></p>
+
+<p class=MsoNormal><span lang=EN-US>https://github.com/pygame</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
