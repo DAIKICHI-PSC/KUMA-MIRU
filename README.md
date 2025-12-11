@@ -717,6 +717,8 @@ lang=EN-US>21</span>から<span lang=EN-US>0</span>にして人を検出して�
 
 <p class=MsoNormal><span lang=EN-US>main.zip(https://github.com/DAIKICHI-PSC/KUMA-MIRU/archive/refs/heads/main.zip)</span></p>
 
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
 <p class=MsoNormal>［各ファイルの説明］</p>
 
 <p class=MsoNormal><span lang=EN-US>materials</span>フォルダ　資料が入っています</p>
