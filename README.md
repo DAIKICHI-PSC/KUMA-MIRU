@@ -713,9 +713,17 @@ lang=EN-US>21</span>から<span lang=EN-US>0</span>にして人を検出して�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal>［本体ファイルのダウンロード先］</p>
+<p class=MsoNormal>［運用方法］</p>
 
-<p class=MsoNormal><span lang=EN-US>main.zip(https://github.com/DAIKICHI-PSC/KUMA-MIRU/archive/refs/heads/main.zip)</span></p>
+<p class=MsoNormal>三つのファイルをダウンロードし、同じフォルダに解凍して下さい。</p>
+
+<p class=MsoNormal><span lang=EN-US>main.zip(https://github.com/DAIKICHI-PSC/KUMA-MIRU/archive/refs/heads/main.zip)</span>本体dファイル</p>
+
+<p class=MsoNormal><span lang=EN-US>excutable_files.zip(https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable_files.zip)</span>三種類の実行ファイル</p>
+
+<p class=MsoNormal><span lang=EN-US>yolov4.weights(https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights)</span><span lang=EN-US>AI</span>学習済モデル</p>
+
+<p class=MsoNormal><span lang=EN-US>materials</span>説明に従って、各Pythnファイルか実行形式ファイルを実行して下さい。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
@@ -753,7 +761,7 @@ lang=EN-US>sample_kuma_miru_sound</span>の設定ファイル</p>
 
 <p class=MsoNormal><span lang=EN-US>yolov4.cfg</span>　<span lang=EN-US>AI</span>の学習モデル</p>
 
-<p class=MsoNormal><span lang=EN-US>yolov4.weights(https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights)</span>　<span lang=EN-US>AI</span>の学習済モデル（ダウンロードして、同じフォルダに入れて下さい）</p>
+<p class=MsoNormal><span lang=EN-US>yolov4.weights(https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights)</span>　<span lang=EN-US>AI</span>学習済モデル（ダウンロードして、同じフォルダに入れて下さい）</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
