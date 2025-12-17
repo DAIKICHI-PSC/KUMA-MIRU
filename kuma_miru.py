@@ -139,14 +139,14 @@ while(True): #繰り返し処理
     cv2.waitKey(1) #繰り返し処理では、ウィンドウの処理等がフリーズするので、割り込み処理を可能にする
     if timer_start_time == 0: #タイマーが開始していない場合
         timer_start_time = time.time() #タイマーの開始時間を取得
-    timer_current_time = time.time() #現在の時間を取得
-    elapsed_time = int(timer_current_time - timer_start_time) #経過時間を取得（整数に変換）
-    if elapsed_time >= timer_interval: #経過時間が、設定した時間より大きいか確認
-        timer_start_time = 0 #タイマーをリセット
-        detected_sum = 0 #各カメラで検出した場合に1を加算し、全てのカメラ処理終了後に1以上なら、external_outputを1にする
-        for i, j in enumerate(cap): #iはインデクス（0からの番号）、jは各VideoCaptureオブジェクト
-            ret, frameA = j.read() #VideoCaptureオブジェクトで、カメラから画像を取得
-            if ret: #カメラ画像取得に成功した場合
+    detected_sum = 0 #各カメラで検出した場合に1を加算し、全てのカメラ処理終了後に1以上なら、external_outputを1にする
+    for i, j in enumerate(cap): #iはインデクス（0からの番号）、jは各VideoCaptureオブジェクト
+        ret, frameA = j.read() #VideoCaptureオブジェクトで、カメラから画像を取得
+        if ret: #カメラ画像取得に成功した場合
+            timer_current_time = time.time() #現在の時間を取得
+            elapsed_time = int(timer_current_time - timer_start_time) #経過時間を取得（整数に変換）
+            if elapsed_time >= timer_interval: #経過時間が、設定した時間より大きいか確認
+                timer_start_time = 0 #タイマーをリセット
                 detection_flag =0 #各カメラで対象物を検出したか確認するフラグをリセット
                 timer_process_start = time.time() #検出処理時間計算用（開始時間）
                 classes, scores, boxes = model.detect(frameA , det_conf, 0.1)#物体検出
