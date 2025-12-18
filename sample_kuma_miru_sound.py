@@ -120,8 +120,8 @@ file.close() #ファイルの読み込み終了
 #変数設定2（カメラ台数、適度な閾値、処理能力に合わせた設定に変更する）=====
 cam_num = int(value(settings[0])) #PCに接続したカメラの台数を指定
 det_conf = float(value(settings[1])) #検出の信頼度の閾値（小さくなる程誤検出が多くなり、大きくなる程検出しにくくなる）
-cap_fps = int(value(settings[2])) #カメラのフレームレート（カメラから、毎秒何枚画像を取得するかを決める値）
-timer_interval = int(value(settings[3])) #検出する間隔を秒単位で指定（0はオフ）（電気消費量を軽減します）
+cap_fps = float(value(settings[2])) #カメラのフレームレート（カメラから、毎秒何枚画像を取得するかを決める値）
+timer_interval = float(value(settings[3])) #検出する間隔を秒単位で指定（0はオフ）（電気消費量を軽減します）
 save_picture = int(value(settings[4])) #検出写真の保存有無
 save_picture_num_MAX = int(value(settings[5])) #検出した写真の保存枚数
 class_num = int(value(settings[6])) #21は熊の番号（cocoデータセット80種類内の一つ）（本プログラムのテストは、カメラを熊の画像に向けるか、値を0にして人を検出してください）
@@ -243,4 +243,7 @@ while(True): #繰り返し処理
                         for l in range(number_of_soundfiles): #指定した効果音のファイル数分再生する----------オリジナルに追加----------
                             pg[random.randint(0, number_of_soundfiles - 1)].play() #効果音を指定した回数再生----------オリジナルに追加----------
                             time.sleep(process_waiting_time) #効果音再生中に処理が進むと、音が重なり過ぎる為、必要に応じて指定時間処理を停止----------オリジナルに追加----------
+    else: #経過時間が、設定した時間より小さい場合
+        for i, j in enumerate(cap): #iはインデクス（0からの番号）、jは各VideoCaptureオブジェクト
+            ret, frameA = j.read() #VideoCaptureオブジェクトで、カメラから画像を取得（映像のラグ発生防止の為、処理しない画像バッファを廃棄）
 #====================================================================

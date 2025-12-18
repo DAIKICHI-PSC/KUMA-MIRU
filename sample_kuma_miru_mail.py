@@ -117,8 +117,8 @@ file.close() #ファイルの読み込み終了
 #変数設定2（カメラ台数、適度な閾値、処理能力に合わせた設定に変更する）=====
 cam_num = int(value(settings[0])) #PCに接続したカメラの台数を指定
 det_conf = float(value(settings[1])) #検出の信頼度の閾値（小さくなる程誤検出が多くなり、大きくなる程検出しにくくなる）
-cap_fps = int(value(settings[2])) #カメラのフレームレート（カメラから、毎秒何枚画像を取得するかを決める値）
-timer_interval = int(value(settings[3])) #検出する間隔を秒単位で指定（0はオフ）（電気消費量を軽減します）
+cap_fps = float(value(settings[2])) #カメラのフレームレート（カメラから、毎秒何枚画像を取得するかを決める値）
+timer_interval = float(value(settings[3])) #検出する間隔を秒単位で指定（0はオフ）（電気消費量を軽減します）
 save_picture = int(value(settings[4])) #検出写真の保存有無
 save_picture_num_MAX = int(value(settings[5])) #検出した写真の保存枚数
 class_num = int(value(settings[6])) #21は熊の番号（cocoデータセット80種類内の一つ）（本プログラムのテストは、カメラを熊の画像に向けるか、値を0にして人を検出してください）
@@ -171,14 +171,14 @@ while(True): #繰り返し処理
     cv2.waitKey(1) #繰り返し処理では、ウィンドウの処理等がフリーズするので、割り込み処理を可能にする
     if timer_start_time == 0: #タイマーが開始していない場合
         timer_start_time = time.time() #タイマーの開始時間を取得
+    timer_current_time = time.time() #現在の時間を取得
+    elapsed_time = int(timer_current_time - timer_start_time) #経過時間を取得（整数に変換）
+    if elapsed_time >= timer_interval: #経過時間が、設定した時間より大きいか確認
+        timer_start_time = 0 #タイマーをリセット
         detected_sum = 0 #各カメラで検出した場合に1を加算し、全てのカメラ処理終了後に1以上なら、external_outputを1にする
-    for i, j in enumerate(cap): #iはインデクス（0からの番号）、jは各VideoCaptureオブジェクト
-        ret, frameA = j.read() #VideoCaptureオブジェクトで、カメラから画像を取得
-        if ret: #カメラ画像取得に成功した場合
-            timer_current_time = time.time() #現在の時間を取得
-            elapsed_time = int(timer_current_time - timer_start_time) #経過時間を取得（整数に変換）
-            if elapsed_time >= timer_interval: #経過時間が、設定した時間より大きいか確認
-                timer_start_time = 0 #タイマーをリセット
+        for i, j in enumerate(cap): #iはインデクス（0からの番号）、jは各VideoCaptureオブジェクト
+            ret, frameA = j.read() #VideoCaptureオブジェクトで、カメラから画像を取得
+            if ret: #カメラ画像取得に成功した場合
                 detection_flag =0 #各カメラで対象物を検出したか確認するフラグをリセット
                 timer_process_start = time.time() #検出処理時間計算用（開始時間）
                 classes, scores, boxes = model.detect(frameA , det_conf, 0.1)#物体検出
@@ -234,4 +234,7 @@ while(True): #繰り返し処理
             if timer_mail_elapsed >= mail_interval: #経過時間が、設定した時間より大きいか確認----------オリジナルに追加----------
                 timer_mail_start = 0 #タイマーをリセット----------オリジナルに追加----------
                 send_mail(subject, body_message, sender_email_address, receiver_email_address, receivercc_email_address, password, mail_server_address, mail_server_port, save_picture_path_list, mail_ssl) #メールを送信する関数の実行（最後に検出した写真を送信）----------オリジナルに追加----------
+    else: #経過時間が、設定した時間より小さい場合
+        for i, j in enumerate(cap): #iはインデクス（0からの番号）、jは各VideoCaptureオブジェクト
+            ret, frameA = j.read() #VideoCaptureオブジェクトで、カメラから画像を取得（映像のラグ発生防止の為、処理しない画像バッファを廃棄）
 #====================================================================
