@@ -1,10 +1,10 @@
 「ＫＵＭＡ　ＭＩＲＵ」  
-https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection0.jpg  
-https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection1.jpg  
-https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection2.jpg  
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection0.jpg"> </img>  
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection1.jpg"> </img>  
+<img src="https://github.com/DAIKICHI-PSC/KUMA-MIRU/blob/main/materials/sample_pictures/detection2.jpg"> </img>  
 
+---
 
-  
 ［概要］  
 本プログラムは、AIで「熊」を検出するプログラムです（設定ファイルで、cocoデータセットの他の番号に変えれば、他の物体も高精度に検出可能です）。  
 最近の熊による被害に対して、何か貢献出来ないかと思い、作成しました。  
@@ -21,9 +21,9 @@ rapberryPI5等のエッジコンピューターも検討しましたが、価格
   
 本プログラムのテストは、カメラを熊の画像に向けるか（精度は落ちます）、「settings.txt」内にある、検出する物体の番号を、熊の21から0にして人を検出してください。  
 パソコンの起動と同時にプログラムも自動で起動出来る様、「タスクマネージャー」の「スタートアップ アプリ」にある、「新しいタスクを実行する」でプログラムを指定して下さい。  
-  
-  
-  
+
+---
+
 ［運用方法］  
 三つのファイルをダウンロードし、同じフォルダに解凍して下さい。  
   
@@ -36,9 +36,9 @@ https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable
 yolov4.weights　AI学習済モデル  
 https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights  
 説明に従って、各Pythonファイルか、実行形式ファイルを実行して下さい。  
-  
-  
-  
+
+---
+
 ［各ファイルの説明］  
 materialsフォルダ　資料が入っています  
 0.mp3　犬の効果音データ  
@@ -58,9 +58,9 @@ settings.txt　共通の設定ファイル
 yolov4.cfg　AIの学習モデル  
 yolov4.weights　AI学習済モデル（ダウンロードして、同じフォルダに入れて下さい）  
 https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights  
-  
-  
-  
+
+---
+
 ［ライセンス］  
 本プログラム  
 MIT LISENCE  
@@ -86,9 +86,9 @@ https://github.com/pyinstaller/pyinstaller/wiki/FAQ
 pygame  
 LGPL  
 配布、商用利用が可能です。  
-  
-  
-  
+
+---
+
 ［appreciation（感謝）］  
 Developer of Python(programming language)  
 Python Software Foundation and the community  
