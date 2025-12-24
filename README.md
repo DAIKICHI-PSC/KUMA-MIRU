@@ -36,7 +36,7 @@ https://github.com/DAIKICHI-PSC/KUMA-MIRU-YOLOV11
 
 ---
 
-［運用方法］  
+［運用］  
 三つのファイルをダウンロードし、同じフォルダに解凍して下さい。  
   
 main.zip　本体ファイル  
@@ -47,6 +47,7 @@ https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable
   
 yolov4.weights　AI学習済モデル  
 https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights  
+  
 説明に従って、各Pythonファイルか、実行形式ファイルを実行して下さい。  
 
 ---
