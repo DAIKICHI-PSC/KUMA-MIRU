@@ -48,7 +48,7 @@ https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/excutable
 yolov4.weights　AI学習済モデル  
 https://github.com/DAIKICHI-PSC/KUMA-MIRU/releases/download/VERSION1.0/yolov4.weights  
   
-説明に従って、各Pythonファイルか、実行形式ファイルを実行して下さい。  
+各Pythonファイルか、実行形式ファイルを実行して下さい。  
 
 ---
 
