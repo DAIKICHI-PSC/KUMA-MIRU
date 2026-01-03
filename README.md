@@ -31,8 +31,10 @@ sample_kuma_miru_sound　熊を検出したら、犬の鳴き声を再生する�
 本プログラムのテストは、カメラを熊の画像に向けるか（精度は落ちます）、「settings.txt」内にある、検出する物体の番号を、熊の21から0にして人を検出してください。  
   
 用途によって、レポジトリを使い分けて下さい。  
-高速検出  
+高速検出（PC）  
 https://github.com/DAIKICHI-PSC/KUMA-MIRU-YOLOV11  
+高速検出、低コスト運用（Raspberry Pi5）  
+https://github.com/DAIKICHI-PSC/KUMA-MIRU-YOLOV11-RPI5  
 
 ---
 
